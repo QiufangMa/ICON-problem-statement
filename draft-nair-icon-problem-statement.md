@@ -154,97 +154,97 @@ This gap manifests in several distinct problem areas:
 
 ## Inadequacy of Deterministic Constraints
 
-Agent behavior cannot be reliably constrained using predefined, 
-deterministic rules or traditional static guardrails. Because agents 
-rely on dynamic reasoning patterns to achieve declarative goals, their 
-exact execution trajectories remain non-deterministic. This intrinsic 
-variability makes operational outcomes significantly less predictable 
-during runtime execution, bypassing legacy input/output filters that 
+Agent behavior cannot be reliably constrained using predefined,
+deterministic rules or traditional static guardrails. Because agents
+rely on dynamic reasoning patterns to achieve declarative goals, their
+exact execution trajectories remain non-deterministic. This intrinsic
+variability makes operational outcomes significantly less predictable
+during runtime execution, bypassing legacy input/output filters that
 fail to account for real-time contextual adaptation.
 
 ## Limited Transparency in Planning and Decision-Making
 
-As agents increasingly execute complex operational tasks, they 
-frequently delegate critical planning paths and execution decisions to 
-Large Language Models (LLMs) or specialized downstream AI models. This 
-delegation creates an optimization barrier, offering limited 
-transparency into how specific decisions are reached or how complex 
-action sequences are generated. Without an out-of-band mechanism to 
-inspect this reasoning layer, operators cannot validate the safety or 
+As agents increasingly execute complex operational tasks, they
+frequently delegate critical planning paths and execution decisions to
+Large Language Models (LLMs) or specialized downstream AI models. This
+delegation creates an optimization barrier, offering limited
+transparency into how specific decisions are reached or how complex
+action sequences are generated. Without an out-of-band mechanism to
+inspect this reasoning layer, operators cannot validate the safety or
 intent of an agent's planned mutations before they hit the infrastructure.
 
 ## Velocity Mismatch and Observation Deficit
 
-Agents are explicitly designed to operate with high degrees of autonomy, 
-speed, and scale. However, CSPs currently lack the corresponding telemetry 
-and control infrastructure required to observe, evaluate, and intercept 
-these systems at the same machine-speed pace. Consequently, effective 
-real-time oversight becomes functionally impossible. Relying on human 
-escalation paradigms is impractical due to the sheer volume and velocity 
+Agents are explicitly designed to operate with high degrees of autonomy,
+speed, and scale. However, CSPs currently lack the corresponding telemetry
+and control infrastructure required to observe, evaluate, and intercept
+these systems at the same machine-speed pace. Consequently, effective
+real-time oversight becomes functionally impossible. Relying on human
+escalation paradigms is impractical due to the sheer volume and velocity
 of the data points involved in active agent pipelines.
 
 ## Maturity Asymmetry in Governance Enablers
 
-A distinct functional asymmetry has emerged between operational 
-capabilities and governance mechanisms. Core features such as multi-agent 
-execution, advanced interoperability frameworks (e.g., Agent-to-Agent 
-{{?A2A}} and Model Context Protocol {{?MCP}}), and long-running autonomous actions 
-are advancing rapidly. Conversely, essential governance enablers—including 
-runtime intervention controls, deterministic transaction rollback, and 
-cross-agent lineage traceability—remain highly immature and lack clear 
+A distinct functional asymmetry has emerged between operational
+capabilities and governance mechanisms. Core features such as multi-agent
+execution, advanced interoperability frameworks (e.g., Agent-to-Agent
+{{?A2A}} and Model Context Protocol {{?MCP}}), and long-running autonomous actions
+are advancing rapidly. Conversely, essential governance enablers—including
+runtime intervention controls, deterministic transaction rollback, and
+cross-agent lineage traceability—remain highly immature and lack clear
 standardisation paths.
 
 ## Fragmentation Across Heterogeneous Integration Layers
 
-Agentic systems operating across mixed Operational Support Systems (OSS) 
-and Network Management domains must interact with a highly 
-heterogeneous mix of legacy systems, modern APIs, and third-party 
-platforms. Establishing consistent, bounded governance across these 
-disparate integration layers is exceptionally complex. Agents routinely 
-invoke actions or retrieve sensitive network data through emerging pathways 
-(e.g., MCP endpoints) that were originally engineered for standard software 
+Agentic systems operating across mixed Operational Support Systems (OSS)
+and Network Management domains must interact with a highly
+heterogeneous mix of legacy systems, modern APIs, and third-party
+platforms. Establishing consistent, bounded governance across these
+disparate integration layers is exceptionally complex. Agents routinely
+invoke actions or retrieve sensitive network data through emerging pathways
+(e.g., MCP endpoints) that were originally engineered for standard software
 clients and never designed to handle AI-driven, autonomous agency.
 
 ## Obsolescence of Identity and Authorization Models
 
-Existing trust and authorization models have failed to evolve in step with 
-dynamic agentic architectures. Traditional Identity and Access Management 
-(IAM) frameworks were designed exclusively for human operators or static, 
-deterministic software processes. These frameworks cannot securely govern 
-emerging dynamic agent personas—which are frequently defined on the fly through 
-custom skills—nor can they safely manage downstream sub-agent permission 
+Existing trust and authorization models have failed to evolve in step with
+dynamic agentic architectures. Traditional Identity and Access Management
+(IAM) frameworks were designed exclusively for human operators or static,
+deterministic software processes. These frameworks cannot securely govern
+emerging dynamic agent personas—which are frequently defined on the fly through
+custom skills—nor can they safely manage downstream sub-agent permission
 delegation or context-dependent privilege escalation.
 
 ## Ambiguity of Lineage and Accountability Attribution
 
-In distributed multi-agent topologies, operational responsibility for an 
-ultimate network outcome is scattered across an extended chain of 
-coordinating agents, foundational models, and abstraction layers. When 
-system failures, performance degradations, or unintended consequences occur, 
-attributing accountability to a specific agent entity, localized model decision, 
-or human-in-the-loop anchor becomes highly ambiguous. This lack of clear 
-lineage creates severe complications for post-incident root-cause analysis 
+In distributed multi-agent topologies, operational responsibility for an
+ultimate network outcome is scattered across an extended chain of
+coordinating agents, foundational models, and abstraction layers. When
+system failures, performance degradations, or unintended consequences occur,
+attributing accountability to a specific agent entity, localized model decision,
+or human-in-the-loop anchor becomes highly ambiguous. This lack of clear
+lineage creates severe complications for post-incident root-cause analysis
 and regulatory compliance reporting.   
 
 ## Externalization of Governance Chains
 
-As CSPs begin sourcing agentic capabilities from diverse third-party 
-vendors, independent software providers, and hyperscalers, operational 
-accountability becomes externalized in ways that are difficult to technically 
+As CSPs begin sourcing agentic capabilities from diverse third-party
+vendors, independent software providers, and hyperscalers, operational
+accountability becomes externalized in ways that are difficult to technically
 or contractually enforce. A typical production agent implementation features 
-highly fragmented dependency chains spanning completely separate vendor 
-ecosystems, including LLM/AI model providers, infrastructure hosts, core 
+highly fragmented dependency chains spanning completely separate vendor
+ecosystems, including LLM/AI model providers, infrastructure hosts, core
 agent frameworks, tool/API repositories, and interconnection fabrics.
 
 ## Emergence of Novel Failure Modes
 
-Agentic systems introduce an entirely new class of complex, systemic failure 
-modes that legacy operational risk frameworks are blind to detect or contain. 
-These include multi-agent alignment failures, where the isolated actions of 
-individual sub-agents appear structurally correct and compliant with their 
-local plans, yet collectively combine to produce a catastrophic network state. 
-Additionally, systems suffer from agent drift, where an agent's reasoning pattern 
-and behavioral outputs shift unpredictably over time as it continuously adapts 
+Agentic systems introduce an entirely new class of complex, systemic failure
+modes that legacy operational risk frameworks are blind to detect or contain.
+These include multi-agent alignment failures, where the isolated actions of
+individual sub-agents appear structurally correct and compliant with their
+local plans, yet collectively combine to produce a catastrophic network state.
+Additionally, systems suffer from agent drift, where an agent's reasoning pattern
+and behavioral outputs shift unpredictably over time as it continuously adapts
 to an evolving network context.
 
 # Solution Space for Network Management Agent Observability, Intervention and Control

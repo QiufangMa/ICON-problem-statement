@@ -622,7 +622,12 @@ Description/Requirements, Stage 2 - Technical Realization, Stage 3 - Protocol Le
 
 # Security Considerations
 
-TODO Security
+There are no security considerations for this document.  It does
+discuss a number of security issues in the course of problem
+analysis, such as Identity and Access Management, Trust Delegation
+across Agent, Trust Level Assignment.  The security considerations for
+Agent Intervention and Control are discussed separately in
+{{?I-D.wmz-nmrg-agent-ndt-arch}}.
 
 
 # IANA Considerations

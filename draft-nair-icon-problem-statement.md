@@ -9,19 +9,19 @@ number:
 date:
 consensus: true
 v: 3
-area: AREA
-workgroup: WG Working Group
+# area: AREA
+# workgroup: WG Working Group
 keyword:
  - next generation
  - unicorn
  - sparkling distributed ledger
 venue:
-  group: WG
-  type: Working Group
-  mail: WG@example.com
-  arch: https://example.com/WG
-  github: USER/REPO
-  latest: https://example.com/LATEST
+#  group: WG
+#  type: Working Group
+#  mail: WG@example.com
+#  arch: https://example.com/WG
+  github: "billwuqin/ICON-problem-statement"
+  latest: "https://billwuqin.github.io/ICON-problem-statement/draft-nair-icon-problem-statement.html"
 
 author:
  -
@@ -206,12 +206,12 @@ prompt filtering at the LLM input boundary, response validation at the LLM outpu
 restrictions on tool invocation. Currently, Guardrails are realized through 4 different mechanisms.
 
 - Rule based filters: apply pattern matching, keyword blocking, regular expressions, and deterministic logic to
-  prompts, context retrieval and completions. 
+  prompts, context retrieval and completions.
 - LLM based safety classifiers: use a secondary language model to evaluate the primary model's output for safety
   policy compliance before it is returned.
 - Agent framework based guardrail libraries: provide structured policy specification languages (e.g. NeMo Guardrails)
   that allow developers to express governance rules in a higher-level format, with the framework handling enforcement
-  logic. 
+  logic.
 - Prompt engineering constraints: shape model behaviour by instruction rather than by interception.
 
 ## Agent Drift Detection
@@ -228,7 +228,7 @@ applicable governance or control mechanism that addresses all scenarios in pract
 strong dependence on domain-specific expertise and observability mechanisms to detect, diagnose, and mitigate drift
 effectively. Many of these also may require fine-tuning the base model with revised data sets. So a runtime control of
 drift needs to be addressed in a case-by-case basis. Some of the practices followed for addressing the Agent drift are
-as follows  
+as follows
 
 - Goal drift is observed by statistical evaluation of production tasks against the evaluation tasks. The mitigation
   may involve fine-tuning the model with revised task lists and associated agent performance.
@@ -300,7 +300,7 @@ regardless of whether decisions are valid or compromised. Another way to view th
 compromised, it is the responsibility of the security layer to prevent or detect this. However, if the security layer
 is bypassed (when adversarial techniques evolve) and if agent still proceeds to action execution, I&C functions as the
 governance backstop, that intervenes to constrain or correct the agent’s actions. I&C ensures that there is a minimum
-level of control is in place to control agent behavior when such security issues emerge and bypassed. 
+level of control is in place to control agent behavior when such security issues emerge and bypassed.
 
 From an I&C perspective, a prominent way to manage agent security risk is to sandbox the agent’s execution environment.
 This means running the agent in a restricted environment so it cannot cross trust boundaries, even if it is
@@ -334,7 +334,7 @@ Traditional IAM frameworks, designed for human users and deterministic software 
 dynamic trust governance aspects of  autonomous agents. The emerging Trust I&C approaches extend beyond static identity
 and permission models to incorporate context-awareness, temporal constraints, and behavior-driven trust evaluation. Since
 this is a cross cutting concen with Security, it requires broader discussion on whether Trust governance and control should
-be driven by an Agent Governance Control Plane or a separate Security governance plane. 
+be driven by an Agent Governance Control Plane or a separate Security governance plane.
 
 Some of the approaches followed for controlling the agent trust are given below:
 
@@ -364,7 +364,7 @@ the behavior of agent, i.e. it requires not just identity, but also continuous b
 by how the agent performs over time - i.e based on trust score, agent is mapped to a trust zone or trust level that determines the
 authority and access assigned to agent. The definition and management of agent identity are beyond the scope of this document.
 
-### Trust Delegation Across Agents 
+### Trust Delegation Across Agents
 
 Trust delegation between agents has a governance challenge that is distinct from single agent trust models. When an orchestrating
 agent delegates a task to a sub-agent, it is not passing work alone. It is extending a scope of authority to an entity that will
@@ -374,7 +374,7 @@ models assume a human delegating to another human or to a deterministic software
 the receiving party has a fixed role, and the scope of delegation is defined at design time. The delegating agent may itself be
 operating under dynamically adjusted trust constraints. The receiving agent may be a different implementation, framework, or vendor.
 The scope of work being delegated may not have been anticipated when permissions were originally configured.  The techniques used
-in trust delegation follows similar patterns as in single agent scenario. 
+in trust delegation follows similar patterns as in single agent scenario.
 
 - Flat delegation: One of the popular pattern today and not advisable in production environment (violated least-privilege principle).
   In this approach delegating agent's full permission scope is passed to the sub-agent without constraint. The sub-agent operates with
@@ -393,7 +393,7 @@ delegating agent is authentic and not introducing security risks, such as throug
 is currently being discussed in open source development forums like Microsoft Agent Governance Toolkit where discussions are ongoing
 around establishing trust verification mechanisms between agents and there are proposals for new protocols like Inter-Agent Trust
 Protocol which aim to address this by enabling agents to validate the identity, intent, and trustworthiness of other agents before
-accepting and executing delegated tasks. Refer to link for more details. 
+accepting and executing delegated tasks. Refer to link for more details.
 
 ### Intervention and Control Relevance
 
@@ -408,7 +408,7 @@ runtime for both individual agents and chains of delegated agents. This also hig
 actions so that I&C system can intervene to control based on trust score and associated risks.
 
 
-# Gaps in the Current Approaches  
+# Gaps in the Current Approaches
 
 ## Limitations of Guardrails
 
@@ -430,7 +430,7 @@ There are many areas where guardrails cannot provide adequate control based on t
   instructions will appear only at the user input boundary.  In reality, agentic systems ingest information from multiple
   sources, and instructions can be introduced indirectly through retrieved documents (RAG), tool outputs, system messages,
   or intermediate reasoning steps.  Addressing this limitation requires a shift from boundary-focused guardrails to
-  context-aware intervention and control mechanisms. 
+  context-aware intervention and control mechanisms.
 
 - Heavy human dependency:  Many guardrail implementations rely on human review for edge cases or escalations, which does not
   scale in high-speed or high-volume environments. Also, there is a fine balance required between flexibility of agent execution
@@ -475,7 +475,7 @@ of trust the sub-agent should inherit, or what constraints should govern the del
 
 ## Limitations of Security I&C
 
-From the I&C perspective following are some of the key limitations in incorporating Security controls in agent. 
+From the I&C perspective following are some of the key limitations in incorporating Security controls in agent.
 
 - Security control mechanisms primarily govern inputs and outputs, but have limited ability to fully interpret or validate the
   internal reasoning process of the agent. As a result, reasoning errors or misalignment may go undetected until they take effect
@@ -491,7 +491,7 @@ From the I&C perspective following are some of the key limitations in incorporat
 
 ## Limitations of Intervention Approaches
 
-As highlighted above intervention mechanisms exist in primitive and framework-specific forms. They have the following limitations. 
+As highlighted above intervention mechanisms exist in primitive and framework-specific forms. They have the following limitations.
 
 - Absence of a standardised external interface that allows an authorized governance authority outside the framework or outside the
   agent application to signal intervention and receive a guaranteed response
@@ -521,7 +521,7 @@ autonomous networks. These areas span architectural considerations, interaction 
 extensions, highlighting the cross-cutting nature of I&C across the system stack. The intent is to identify foundational areas that
 require further study and alignment within TM Forum Autonomous Networks work items and the broader CSP transformation towards AI-native
 operations. Note that some of these items can span development across multiple stages - for example Stage 1 - Service
-Description/Requirements, Stage 2 - Technical Realization, Stage 3 - Protocol Level extensions (e.g. A2A-T) 
+Description/Requirements, Stage 2 - Technical Realization, Stage 3 - Protocol Level extensions (e.g. A2A-T)
 
 - Agent Intervention and Control Architecture: Define/Formalize the structural extensions required to the current AN Agent Architecture
   to support centralized, framework-agnostic governance.
@@ -538,7 +538,7 @@ Description/Requirements, Stage 2 - Technical Realization, Stage 3 - Protocol Le
   relationship between an agent and its operational environment (or between agents). Specifies, in a vendor-neutral and framework-agnostic
   way, the minimum set of I&C capabilities an agent must expose: what obligations it accepts, what authorities the operator holds to control
   the agent, and how these are communicated and enforced across the agent execution lifecycle.
-  
+
   * Optional - Zero-Trust for Agent
 
   * Optional - Agent Trust Control and Delegation : Defines how trust is assigned, delegated, and enforced across agents
@@ -553,7 +553,7 @@ Description/Requirements, Stage 2 - Technical Realization, Stage 3 - Protocol Le
   to control, policy enforcement, and observability.
 
   * Agent Card Extension - Governance Capability Declaration - Extends the Agent Card with a governance manifest block that declares what I&C
-    capabilities an agent supports 
+    capabilities an agent supports
   * Agent Governance Contract Establishment - Negotiation and exchange of governance terms at connection or session initiation
   * Multi-Agent Task Execution Authority Delegation - Defines a protocol-level mechanism for carrying the authority chain alongside task delegation between agents
   * Intervention and Control Message Envelope - Structure and semantics of messages used to perform intervention and control actions.

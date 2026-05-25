@@ -523,32 +523,6 @@ Three limitations characterize current implementation of quality gate.
   framework, but that pause is not expressed as a standardised intervention signal that a central governance authority can monitor,
   escalate, or resolve. The gate operates in isolation from the broader governance stack.
 
-
-## Limitations of Trust I&C
-
-Current trust models are implementation-specific and lack interoperability across agent frameworks. Advanced approaches highlighted
-above, such as dynamic trust scoring, evaluate agent behavior within the context of a single framework, rather than considering
-interactions across collaborating agents. A key limitation in existing trust control models is the handling of delegated trust which
-is the trust relationship that arises when an orchestrating agent delegates authority to a sub-agent. Current frameworks do not provide
-a consistent approach to this. For example, when a highly trusted orchestrator assigns a task to a sub-agent, it is unclear what level
-of trust the sub-agent should inherit, or what constraints should govern the delegated authority.
-
-## Limitations of Security I&C
-
-From the I&C perspective following are some of the key limitations in incorporating Security controls in agent.
-
-- Security control mechanisms primarily govern inputs and outputs, but have limited ability to fully interpret or validate the
-  internal reasoning process of the agent. As a result, reasoning errors or misalignment may go undetected until they take effect
-  through actions.
-
-- In federated or multi-agent environments, enforcing consistent security and I&C policies across domains is complex. Differences
-  in trust models, policies, and enforcement mechanisms can lead to gaps in control.
-
-- Security standardization for agents is still evolving (e.g. OWASP Top 10 for Agentic Applications provide an emerging taxonomy
-  of agent-related security risks) but they remain primarily focused on risk identification rather than operational control. At
-  present, most control mechanisms are tightly coupled to specific frameworks or vendor implementations, leading to fragmented and
-  non-interoperable approaches.
-
 ## Limitations of Intervention Approaches
 
 As highlighted above intervention mechanisms exist in primitive and framework-specific forms. They have the following limitations.
@@ -566,6 +540,31 @@ As highlighted above intervention mechanisms exist in primitive and framework-sp
 - Current intervention mechanism requires either a human decision or a pre-coded condition to trigger it. There is no mechanism
   that continuously monitors agent behaviour against governance policies and automatically triggers a proportionate intervention
   response when a deviation is detected
+
+## Limitations of Security I&C
+
+From the I&C perspective following are some of the key limitations in incorporating Security controls in agent.
+
+- Security control mechanisms primarily govern inputs and outputs, but have limited ability to fully interpret or validate the
+  internal reasoning process of the agent. As a result, reasoning errors or misalignment may go undetected until they take effect
+  through actions.
+
+- In federated or multi-agent environments, enforcing consistent security and I&C policies across domains is complex. Differences
+  in trust models, policies, and enforcement mechanisms can lead to gaps in control.
+
+- Security standardization for agents is still evolving (e.g. OWASP Top 10 for Agentic Applications provide an emerging taxonomy
+  of agent-related security risks) but they remain primarily focused on risk identification rather than operational control. At
+  present, most control mechanisms are tightly coupled to specific frameworks or vendor implementations, leading to fragmented and
+  non-interoperable approaches.
+
+## Limitations of Trust I&C
+
+Current trust models are implementation-specific and lack interoperability across agent frameworks. Advanced approaches highlighted
+above, such as dynamic trust scoring, evaluate agent behavior within the context of a single framework, rather than considering
+interactions across collaborating agents. A key limitation in existing trust control models is the handling of delegated trust which
+is the trust relationship that arises when an orchestrating agent delegates authority to a sub-agent. Current frameworks do not provide
+a consistent approach to this. For example, when a highly trusted orchestrator assigns a task to a sub-agent, it is unclear what level
+of trust the sub-agent should inherit, or what constraints should govern the delegated authority.
 
 # Standardization Area
 

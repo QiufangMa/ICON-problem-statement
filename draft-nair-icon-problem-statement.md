@@ -24,14 +24,14 @@ venue:
   latest: "https://billwuqin.github.io/ICON-problem-statement/draft-nair-icon-problem-statement.html"
 
 author:
-  -
-    fullname: Manoj Nair
-    organization: NetCracker
-    email: manoj.k.nair@netcracker.com
  -
     fullname: Qin Wu
     organization: Huawei
     email: bill.wu@huawei.com
+ -
+    fullname: Manoj Nair
+    organization: NetCracker
+    email: manoj.k.nair@netcracker.com
 
 normative:
 

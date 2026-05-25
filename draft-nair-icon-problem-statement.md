@@ -197,7 +197,7 @@ of the data points involved in active agent pipelines.
 A distinct functional asymmetry has emerged between operational
 capabilities and governance mechanisms. Core features such as multi-agent
 execution, advanced interoperability frameworks (e.g., Agent-to-Agent
-{{?A2A}} and Model Context Protocol {{?MCP}}), and long-running autonomous actions
+{{A2A}} and Model Context Protocol {{MCP}}), and long-running autonomous actions
 are advancing rapidly. Conversely, essential governance enablers—including
 runtime intervention controls, deterministic transaction rollback, and
 cross-agent lineage traceability—remain highly immature and lack clear

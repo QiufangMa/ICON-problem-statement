@@ -43,7 +43,7 @@ term "Intervention and Control" is used to describe a set of automated and
 human-initiated mechanisms that guarantee the capability to observe, constrain,
 correct, and terminate AI agents at any point, for any reason, irrespective of
 their level of autonomy under which it operates, to ensure resilience, recovery,
-and operational continuity. 
+and operational continuity.
 
 The set of enabled observability, intervention and control reflects operator
 service offerings to ensure that autonomous operations can be stopped, or safely

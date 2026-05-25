@@ -33,6 +33,15 @@ normative:
 
 informative:
 
+  MCP:
+    title: Model Context Protocol
+    target: https://modelcontextprotocol.io/
+    date: November 2024
+
+  A2A:
+    title: Agent2Agent (A2A) protocol
+    target: https://google-a2a.github.io/A2A/#/documentation?id=agent2agent-protocol-a2a
+    date: April 2025
 
 --- abstract
 

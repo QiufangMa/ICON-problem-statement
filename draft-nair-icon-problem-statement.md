@@ -25,9 +25,9 @@ venue:
 
 author:
  -
-    fullname:
-    organization:
-    email:
+    fullname: Qin Wu
+    organization: Huawei
+    email: bill.wu@huawei.com
 
 normative:
 

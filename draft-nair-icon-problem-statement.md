@@ -139,10 +139,9 @@ identify gaps that need to be filled.
 
 # Problem Space
 
-The deployment of autonomous agents within production network
-environments highlights a growing structural mismatch between machine-
-speed execution and human-speed oversight. This gap manifests
-in several distinct problem areas:
+The deployment of autonomous agents within production network environments highlights
+a growing structural mismatch between machine-speed execution and human-speed oversight.
+This gap manifests in several distinct problem areas:
 
 ## Lack of Protocol-Level Universality
 

@@ -157,11 +157,10 @@ the management plane must interact with vendor-proprietary internal mechanisms.
 Existing industry guardrails are static, localized, and only filter data at specific
 boundaries (like LLM text inputs/outputs) and focus heavily on the data processing
 boundaries (input text filtering and output schema validation).
-They do not evaluate the operational implications of dynamic
-multi-step action sequences or track cumulative risks where individual actions appear
-valid but collectively trigger failures,e.g., a series of individual network mutations
-may each pass localized semantic filters but collectively result
-in an unauthorized state or a resource-exhausting loop (e.g.,
+They do not evaluate the operational implications of dynamic multi-step action sequences
+or track cumulative risks where individual actions appear valid but collectively trigger
+failures, e.g., a series of individual network mutations may each pass localized semantic
+filters but collectively result in an unauthorized state or a resource-exhausting loop (e.g.,
 ping-ponging traffic between network nodes). They are also blind to indirect instruction
 injection via Retrieval-Augmented Generation (RAG).
 
@@ -190,10 +189,10 @@ or recovery.
 ## Multi-Agent Coordination and Cascading Failures
 
 In Level 4 Autonomous Networks, agents collaborate and delegate sub-tasks
-to downstream agents across different domains (pp. 6, 10). If a downstream
-agent encounters an anomaly or metric-optimization bias (e.g., skipping validation
-steps to meet speed goals), the error propagates upward without an orderly path
-to contain it or reverse partial work.
+to downstream agents across different domains. If a downstream agent encounters
+an anomaly or metric-optimization bias (e.g., skipping validation steps to meet
+speed goals), the error propagates upward without an orderly path to contain it
+or reverse partial work.
 
 # Solution Space for Network Management Agent Observability, Intervention and Control
 

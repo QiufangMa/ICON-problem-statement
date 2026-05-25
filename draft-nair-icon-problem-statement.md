@@ -43,6 +43,16 @@ informative:
     target: https://google-a2a.github.io/A2A/#/documentation?id=agent2agent-protocol-a2a
     date: April 2025
 
+  IG1507:
+    title: IG1507 Intervention and Control for Agentic Operation V1.0.0 DRAFT
+    target: https://projects.tmforum.org/wiki/pages/viewpage.action?pageId=411641744
+    date: May 2026
+
+  IG1251G:
+    title: IP Network AN Level 4 Agentic Architecture for Multi-Scenario Autonomy
+    target: https://projects.tmforum.org/wiki/pages/viewpage.action?pageId=401824956
+    date: May 2026
+
 --- abstract
 
 This document provides an overview of the issues associated with the

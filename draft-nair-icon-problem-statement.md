@@ -322,7 +322,7 @@ function or if-else statements. Similarly, Google ADK (Agent Development Kit) pr
 before or after tool use and implement quality gate logic. So most of the techniques that exist today are agent
 framework specific.
 
-# Intervention Approaches
+## Intervention Approaches
 
 The intervention mechanisms that exist today in agentic systems are mostly implementation-specific, tied to individual
 frameworks, and not mature enough to form a consistent or deployable operational practice. Currently, the mechanisms

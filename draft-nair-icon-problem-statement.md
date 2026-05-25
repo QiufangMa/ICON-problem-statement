@@ -224,14 +224,14 @@ system failures, performance degradations, or unintended consequences occur,
 attributing accountability to a specific agent entity, localized model decision,
 or human-in-the-loop anchor becomes highly ambiguous. This lack of clear
 lineage creates severe complications for post-incident root-cause analysis
-and regulatory compliance reporting.   
+and regulatory compliance reporting.
 
 ## Externalization of Governance Chains
 
 As CSPs begin sourcing agentic capabilities from diverse third-party
 vendors, independent software providers, and hyperscalers, operational
 accountability becomes externalized in ways that are difficult to technically
-or contractually enforce. A typical production agent implementation features 
+or contractually enforce. A typical production agent implementation features
 highly fragmented dependency chains spanning completely separate vendor
 ecosystems, including LLM/AI model providers, infrastructure hosts, core
 agent frameworks, tool/API repositories, and interconnection fabrics.

@@ -49,7 +49,6 @@ architectural gaps in current framework-specific implementations and
 outlines the requirements for standardizing external human agent interaction
 interfaces, runtime contracts, and human-agent signalling protocols.
 
-
 --- middle
 
 # Introduction

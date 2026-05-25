@@ -586,12 +586,12 @@ Description/Requirements, Stage 2 - Technical Realization, Stage 3 - Protocol Le
 - Agent Intervention and Control Architecture: Define/Formalize the structural extensions required to the current AN Agent Architecture
   to support centralized, framework-agnostic governance.
 
-- Agent I&C Taxonomy - Failure Modes, Intervention & Control Messages, Observability Constructs : Provides a standardised vocabulary of
+- Agent I&C Taxonomy - Failure Modes, Intervention & Control Messages, Observability Constructs: Provides a standardised vocabulary of
   failure modes, I&C actions, and observability constructs across multi-agent systems. It establishes a common foundation for consistent
   monitoring, diagnosis, and intervention.
 
 - Agent I&C Interface Specification: Specifies the standardised external interface through which the governance plane communicates with
-  agents. Currently, every control and intervention point is only reachable through framework-specific, proprietary mechanisms. This
+  agents from the human operators. Currently, every control and intervention point is only reachable through framework-specific, proprietary mechanisms. This
   specification defines a common protocol capabilities that any compliant agent must expose, regardless of its underlying framework.
 
 - Agent I&C Contract Specification:Addresses the absence of a standardised governance contract model for expressing the runtime I&C
@@ -601,9 +601,9 @@ Description/Requirements, Stage 2 - Technical Realization, Stage 3 - Protocol Le
 
   * Optional - Zero-Trust for Agent
 
-  * Optional - Agent Trust Control and Delegation : Defines how trust is assigned, delegated, and enforced across agents
+  * Optional - Agent Trust Control and Delegation: Defines how trust is assigned, delegated, and enforced across agents
 
-- Guardrail Specification : Focuses on defining the constraints and safeguards that govern agent behavior at runtime. Guardrails may apply to
+- Guardrail Specification: Focuses on defining the constraints and safeguards that govern agent behavior at runtime. Guardrails may apply to
   inputs, outputs, actions, and access to context or data, and are intended to prevent unsafe, non-compliant, or unintended outcomes. The
   objective is to provide a structured approach to specifying and enforcing these constraints in a way that is consistent, composable, and
   aligned with overall governance policies.

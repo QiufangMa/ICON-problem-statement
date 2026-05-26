@@ -165,7 +165,6 @@ identify gaps that need to be filled.
 - Trajectory record: Keep track of Agent behaviour and produce audit log or trace information to Capture the entire "flight path" or reasoning
                      sequence the agent followed to reach its conclusion using using a structured Thought,Action,Observation loop.
 
-
 # Problem Space
 
 The deployment of autonomous agentic systems within Communications

@@ -141,14 +141,15 @@ identify gaps that need to be filled.
                                  task, human-agent communication involves delegation, where the human provides a goal and the agent
                                  autonomously figures out how to achieve it.
 
-- Observability: Enabling network behavioral assessment through analysis of observed operational network data (logs, metrics, traces, etc.)
-                with the aim of detecting symptoms of network behavior, and to identify anomalies and their causes.
+- Observability: The visibility into an agent's internal state, decision-making logic, and workflow execution from its external telemetry
+                 outputs (e.g., logs, traces, metrics), enabling human   operators or monitoring systems to understand what the agent is
+                 doing and why it behaves in a specific manner.
 
-- Intervention: Operates when something has gone wrong, is going wrong, or is about to go wrong that provides humans with the
-                ability to detect, interrupt, correct, and recover from agent behavior that is not anticipated by control mechanism.
+- Intervention: A reactive, emergency action to intervene or take control of an agent with boundary violations, anomalies, failures, or
+                risks, so as to block harmful decisions, disrupt hazards, and promptly mitigate losses.
 
-- Control: Operates before and during agent action execution defining what an agent is permitted to do, enforcing boundaries,
-           and structuring the environment so that harmful or unauthorized actions are difficult or impossible to execute.
+- Control: Establish a deterministic operational boundary for the agent before execution. By pre-defining the agent's behavior scopes,
+           operational constraints, and security baselines, it fundamentally mitigates abnormal behaviors from agents.
 
 - Evaluation:Using Trajectory record to assess the performance and understand how an gent solves problem,e.g.,Checking if the agent took
              the shortest sequence of actions or wasted resources on redundant tool or Analyzing specific segments of the trajectory to

@@ -47,7 +47,7 @@ informative:
     target: https://google-a2a.github.io/A2A/#/documentation?id=agent2agent-protocol-a2a
     date: April 2025
 
-  IG1507:
+  IG1548:
     title: IG1507 Intervention and Control for Agentic Operation V1.0.0 DRAFT
     target: https://projects.tmforum.org/wiki/pages/viewpage.action?pageId=411641744
     date: May 2026

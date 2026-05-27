@@ -225,7 +225,7 @@ deterministic software processes. These frameworks cannot securely govern
 emerging dynamic agent personas which are frequently defined on the fly through
 custom skills, nor can they safely manage downstream sub-agent permission
 delegation or context-dependent privilege escalation.
- 
+
 ### Multi-Vendor Dependency Risks
 
 As CSPs begin sourcing agentic capabilities from diverse third-party
@@ -234,8 +234,8 @@ accountability becomes externalized in ways that are difficult to technically
 or contractually enforce. A typical production agent implementation features
 highly fragmented dependency chains spanning completely separate vendor
 ecosystems, including LLM/AI model providers, infrastructure hosts, core
-agent frameworks, tool/API repositories, and interconnection fabrics. 
- 
+agent frameworks, tool/API repositories, and interconnection fabrics.
+
 ### Fragmentation Across Heterogeneous Integration Layers
 
 Agentic systems operating across mixed Operational Support Systems (OSS)

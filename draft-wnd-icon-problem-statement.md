@@ -375,7 +375,7 @@ involve the following:
 ## Security I&C Approaches
 
 Whether security control (specifically control mechanisms, not broader security governance) should fall within the
-scope of I&C requires further discussion.
+scope of I&C (Intervention and Control) requires further discussion.
 
 Current industry approaches to agent security primarily focus on protecting the agent from malicious interference to
 ensure that the inputs it receives and processes are not tampered with and manipulated. I&C is concerned with governing

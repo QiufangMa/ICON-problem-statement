@@ -195,9 +195,11 @@ frequently delegate critical planning paths and execution decisions to
 Large Language Models (LLMs) or specialized downstream AI models. This
 delegation creates an optimization barrier, offering limited
 transparency into how specific decisions are reached or how complex
-action sequences are generated. Without an out-of-band mechanism to
-inspect this reasoning layer, operators cannot validate the safety or
-intent of an agent's planned mutations before they hit the infrastructure.
+action sequences are generated.
+
+Without an out-of-band mechanism to inspect this reasoning layer, operators
+cannot validate the safety or intent of an agent's planned mutations before
+they hit the infrastructure.
 
 ## Velocity Mismatch and Observation Deficit
 
@@ -213,12 +215,14 @@ of the data points involved in active agent pipelines.
 
 A distinct functional asymmetry has emerged between operational
 capabilities and governance mechanisms. Core features such as multi-agent
-execution, advanced interoperability frameworks (e.g., Agent-to-Agent
-{{A2A}} and Model Context Protocol {{MCP}}), and long-running autonomous actions
-are advancing rapidly. Conversely, essential governance enablers—including
-runtime intervention controls, deterministic transaction rollback, and
-cross-agent lineage traceability—remain highly immature and lack clear
-standardisation paths.
+execution, advanced interoperability frameworks for agent to agent, agent to tools
+communication (e.g., Agent-to-Agent {{A2A}} and Model Context Protocol {{MCP}}),
+and long-running autonomous actions are advancing rapidly.
+
+Conversely, essential governance enablers including runtime intervention
+controls, deterministic transaction rollback, and cross-agent lineage
+traceability, agent behavior traceability remain highly immature and lack
+clear standardisation paths.
 
 ## Fragmentation Across Heterogeneous Integration Layers
 
@@ -234,11 +238,11 @@ clients and never designed to handle AI-driven, autonomous agency.
 ## Obsolescence of Identity and Authorization Models
 
 Existing trust and authorization models have failed to evolve in step with
-dynamic agentic architectures. Traditional Identity and Access Management
+dynamic agentic AI architectures. Traditional Identity and Access Management
 (IAM) frameworks were designed exclusively for human operators or static,
 deterministic software processes. These frameworks cannot securely govern
-emerging dynamic agent personas—which are frequently defined on the fly through
-custom skills—nor can they safely manage downstream sub-agent permission
+emerging dynamic agent personas which are frequently defined on the fly through
+custom skills, nor can they safely manage downstream sub-agent permission
 delegation or context-dependent privilege escalation.
 
 ## Ambiguity of Lineage and Accountability Attribution

@@ -287,9 +287,9 @@ to an evolving network context.
 
 # Solution Space for Network Management Agent Observability, Intervention and Control
 
-## Guardrails
+## AI Guardrails
 
-These are most mature, and most operationally familiar AI governance mechanism in production today. Guardrail
+These are most mature, and most operationally familiar AI governance mechanism in production today. AI Guardrail
 approaches currently realized in the industry operate at defined transition points in the agent pipeline, primarily
 prompt filtering at the LLM input boundary, response validation at the LLM output boundary, and access control
 restrictions on tool invocation. Currently, Guardrails are realized through 4 different mechanisms.
@@ -499,7 +499,7 @@ actions so that I&C system can intervene to control based on trust score and ass
 
 # Gaps in the Current Approaches
 
-## Limitations of Guardrails
+## Limitations of AI Guardrails
 
 There are many areas where guardrails cannot provide adequate control based on the current capabilities.
 

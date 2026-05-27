@@ -95,17 +95,22 @@ filter level or through static boundary alignment.
 
 However as AI systems are increasingly integrated into autonomous workflows and
 critical infrastructure, these static measures are proving insufficient for the
-full operational lifecycle, they often cannot detect, interrupt, and rollover from
-unanticipated behaviors. Network operators usually lack an equivalent infrastructure
-for human oversight or to provide continuous, monitoring of an AI system’s internal
-logic or its long-running execution paths that match the speed and scale of the network
-management Agent applications, e.g., network failure or security risk is hard to detect
-and control, occurring at machine speed. When a violation is suspected, there are currently
-no standardized protocols for intervention (e.g., immediate task suspension) and recovery
-(e.g., reverting to a last known safe state or undoing a series of autonomous actions that
-introduce substantial operational risk) mechanisms. In non-deterministic environments, the
-lack of human oversight and human-AI semantic intent exchange hinder timely risk mitigation
-and state recovery during boundary violations by agents.
+full operational lifecycle, e.g.,
+
+- Unable to detect, interrupt, and rollover from unanticipated behaviors;
+
+- Network operators usually lack an equivalent infrastructure for human oversight;
+
+- Provide continuous, monitoring of an AI system’s internal logic or its long-running
+  execution paths that match the speed and scale of the network management Agent applications,
+  e.g., network failure or security risk is hard to detect and control, occurring at machine speed.
+
+- When a violation is suspected, there are currently no standardized protocols for intervention
+  (e.g., immediate task suspension) and recovery (e.g., reverting to a last known safe state or
+   undoing a series of autonomous actions that introduce substantial operational risk) mechanisms.
+
+- In non-deterministic environments, the lack of human oversight and human-AI semantic intent exchange
+  hinder timely risk mitigation and state recovery during boundary violations by agents.
 
 This document provides a problem statement for protocol on agent observability, intervation and control.
 We list the properties the protocol should have, then explain why those properties are necessary.  We describe why a

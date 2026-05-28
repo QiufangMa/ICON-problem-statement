@@ -222,9 +222,10 @@ Existing trust and authorization models have failed to evolve in step with
 dynamic agentic AI architectures. Traditional Identity and Access Management
 (IAM) frameworks were designed exclusively for human operators or static,
 deterministic software processes. These frameworks cannot securely govern
-emerging dynamic agent personas which are frequently defined on the fly through
-custom skills, nor can they safely manage downstream sub-agent permission
-delegation or context-dependent privilege escalation.
+emerging dynamic agent personas such as autonomous entity identities and behavioral
+profiles which are frequently created and modified on the fly through metadata
+information to describe functional capabilities, nor can they safely manage
+downstream sub-agent permission delegation or context-dependent privilege escalation.
 
 ### Multi-Vendor Dependency Risks
 

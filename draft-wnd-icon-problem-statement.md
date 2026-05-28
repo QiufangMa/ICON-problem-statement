@@ -281,6 +281,7 @@ clear standardisation paths.
 Agentic systems introduce an entirely new class of complex, systemic failure
 modes that legacy operational risk frameworks are blind to detect or contain.
 These include:
+
 - Multi-agent alignment failures, where the isolated actions of
   individual sub-agents appear structurally correct and compliant with their
   local plans, yet collectively combine to produce a catastrophic network state.

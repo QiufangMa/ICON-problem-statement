@@ -264,27 +264,30 @@ fail to account for real-time contextual adaptation.
 ### Maturity Asymmetry in Governance Enablers
 
 A distinct functional asymmetry has emerged between operational
-capabilities and governance mechanisms. Core features such as multi-agent
-execution, advanced interoperability frameworks for agent to agent, agent to tools
-communication (e.g., Agent-to-Agent {{A2A}} and Model Context Protocol {{MCP}}),
-and long-running autonomous actions are advancing rapidly.
+capabilities and governance mechanisms.
+
+Core features such as multi-agent execution, advanced interoperability frameworks
+for agent to agent, agent to tools communication (e.g., Agent-to-Agent {{A2A}}
+and Model Context Protocol {{MCP}}), and long-running autonomous actions are
+advancing rapidly.
 
 Conversely, essential governance enablers including runtime intervention
 controls, deterministic transaction rollback, and cross-agent lineage
 traceability, agent behavior traceability remain highly immature and lack
 clear standardisation paths.
 
-
 ### AI-Native Failure Emergence
 
 Agentic systems introduce an entirely new class of complex, systemic failure
 modes that legacy operational risk frameworks are blind to detect or contain.
-These include multi-agent alignment failures, where the isolated actions of
-individual sub-agents appear structurally correct and compliant with their
-local plans, yet collectively combine to produce a catastrophic network state.
-Additionally, systems suffer from agent drift, where an agent's reasoning pattern
-and behavioral outputs shift unpredictably over time as it continuously adapts
-to an evolving network context.
+These include:
+- Multi-agent alignment failures, where the isolated actions of
+  individual sub-agents appear structurally correct and compliant with their
+  local plans, yet collectively combine to produce a catastrophic network state.
+
+- Additionally, systems suffer from agent drift, where an agent's reasoning pattern
+  and behavioral outputs shift unpredictably over time as it continuously adapts
+  to an evolving network context.
 
 # Solution Space for Network Management Agent Observability, Intervention and Control
 

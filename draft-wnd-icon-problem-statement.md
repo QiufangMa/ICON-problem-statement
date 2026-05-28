@@ -200,8 +200,8 @@ Agents are explicitly designed to operate with high degrees of autonomy,
 speed, and scale. However, CSPs currently lack the corresponding telemetry
 and control infrastructure required to observe, evaluate, and intercept
 these systems at the same machine-speed pace. Consequently, effective
-real-time oversight becomes functionally impossible. Relying on human
-escalation paradigms is impractical due to the sheer volume and velocity
+real-time oversight becomes functionally impossible. Always relying on human
+escalation paradigms is usually impractical due to the sheer volume and velocity
 of the data points involved in active agent pipelines.
 
 ### Ambiguity of Lineage and Accountability Attribution

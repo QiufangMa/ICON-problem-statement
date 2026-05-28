@@ -339,7 +339,7 @@ as follows
 ## Quality Gates
 
 Quality gates are checkpoints that evaluate whether an operation should proceed or not, or should be conditionally
-allowed. 
+allowed.
 
 Unlike guardrails which enforce policy constraints at defined boundaries of Agent implementation, quality
 gates assess whether the work product of one stage meets a defined quality standard before permitting progression to

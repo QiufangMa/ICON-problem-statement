@@ -318,7 +318,7 @@ decision-making capability, and collaboration drift when the effectiveness of in
 or other agents degrades.
 
 Agent drift is a well-recognized problem in academic research and agent frameworks. However, there is no universally
-applicable governance or control mechanism that addresses all scenarios in practice. A key reason for this is the
+applicable control mechanism that addresses all scenarios in practice. A key reason for this is the
 strong dependence on domain-specific expertise and observability mechanisms to detect, diagnose, and mitigate drift
 effectively. Many of these also may require fine-tuning the base model with revised data sets. So a runtime control of
 drift needs to be addressed in a case-by-case basis. Some of the practices followed for addressing the Agent drift are
@@ -339,13 +339,17 @@ as follows
 ## Quality Gates
 
 Quality gates are checkpoints that evaluate whether an operation should proceed or not, or should be conditionally
-allowed. Unlike guardrails which enforce policy constraints at defined boundaries of Agent implementation, quality
+allowed. 
+
+Unlike guardrails which enforce policy constraints at defined boundaries of Agent implementation, quality
 gates assess whether the work product of one stage meets a defined quality standard before permitting progression to
-the next.  The concept is borrowed from DevOps practice i.e. quality gates in CI/CD pipelines that prevent code from
-advancing through build, test, and deployment stages unless it meets defined quality criteria. While guardrails govern
-crossing points i.e. what enters and exits defined zones, quality gates govern progression points - whether work of
-sufficient quality advances to the next stage. Quality gates are the ideal mechanism to involve humans for agent tasks
-execution quality and escalations - i.e. at stage transitions where the accumulated work product of a whole reasoning
+the next. The concept is borrowed from DevOps practice i.e. quality gates in CI/CD pipelines that prevent code from
+advancing through build, test, and deployment stages unless it meets defined quality criteria. While guardrails determine
+crossing points i.e. what enters and exits defined zones, quality gates determine progression points - whether work of
+sufficient quality advances to the next stage.
+
+Quality gates are the ideal mechanism to involve humans for agent tasks
+execution quality and escalations,i.e., at stage transitions where the accumulated work product of a whole reasoning
 stage is ready for assessment where the human is presented with a complete plan, a complete risk assessment, and a
 specific decision to make.
 
@@ -409,7 +413,7 @@ inputs.
 TR270 defines Trust as "An assessment by an agent in a trustor role that another agent in a trustee role can satisfy a
 request to perform an action or provide information with acceptable expected outcomes and risk". Trust in autonomous
 agents spans multiple dimensions, including identity (who the agent is), authorization (what it is allowed to do),
-control(how its actions are governed during execution), behavior (whether it acts in alignment with expected goals
+control (how its actions are governed during execution), behavior (whether it acts in alignment with expected goals
 and produces correct outcomes), and context (under what conditions it operates). There are also different scope of
 trust under discussion across industry including
 - Trust at the individual agent and multi-agent execution and operational behavior, focusing on execution reliability,

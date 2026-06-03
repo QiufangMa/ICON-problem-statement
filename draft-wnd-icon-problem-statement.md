@@ -119,7 +119,7 @@ full operational lifecycle, e.g.,
 - In non-deterministic environments, the lack of human oversight and human-AI semantic intent exchange
   hinder timely risk mitigation and state recovery during boundary violations by agents.
 
-This document provides a problem statement for protocol on agent observability, intervation and control.
+This document provides a problem statement for protocol on agent observability, intervention and control.
 We list the properties the protocol should have, then explain why those properties are necessary. We describe why a
 new protocol is the best solution for the more general problem of identifying and characterizing trajectory records
 related to agent behavior or workflow operation, continuous monitoring and evaluation, enable human oversight, provide
@@ -143,34 +143,35 @@ identify gaps that need to be filled.
 -  Cascading Failure: A scenario where a failure in one downstream
     sub-agent propagates across multi-agent boundaries.
 
-- Human to Agent Communication: The interaction between human users and network management Agent designed to perform tasks, solve problems,
-                                 or provide information. Unlike standard human-to-machine interaction where a human drives every step of a
-                                 task, human-agent communication involves delegation, where the human provides a goal and the agent
-                                 autonomously figures out how to achieve it.
+- Human to Agent Communication: The interaction between human users and network management Agent designed to perform tasks, solve
+    problems, or provide information. Unlike standard human-to-machine interaction where a human drives every step of a
+    task, human-agent communication involves delegation, where the human provides a goal and the agent autonomously figures out
+    how to achieve it.
 
-- Agent Observability: The visibility into an agent's internal state, decision-making logic, and workflow execution from its external telemetry
-                 outputs (e.g., logs, traces, metrics), enabling human   operators or monitoring systems to understand what the agent is
-                 doing and why it behaves in a specific manner.
+- Agent Observability: The visibility into an agent's internal state, decision-making logic, and workflow execution from its
+   external telemetry outputs (e.g., logs, traces, metrics), enabling human   operators or monitoring systems to understand what
+   the agent is doing and why it behaves in a specific manner.
 
-- Intervention: A reactive, emergency action to intervene or take control of an agent with boundary violations, anomalies, failures, or
-                risks, so as to block harmful decisions, disrupt hazards, and promptly mitigate losses.
+- Intervention: A reactive, emergency action to intervene or take control of an agent with boundary violations, anomalies, failures,
+                or risks, so as to block harmful decisions, disrupt hazards, and promptly mitigate losses.
 
 - Control: Establish a deterministic operational boundary for the agent before execution. By pre-defining the agent's behavior scopes,
            operational constraints, and security baselines, it fundamentally mitigates abnormal behaviors from agents.
 
-- Evaluation: Using Trajectory Record to assess the performance and understand how an Agent solves problems, e.g., checking if the agent took
-             the shortest sequence of actions or wasted resources on redundant tools or analyzing specific segments of the trajectory to
-             see if the agent excels at information retrieval but struggles with mathematical synthesis.
+- Evaluation: Using Trajectory Record to assess the performance and understand how an Agent solves problems, e.g., checking if the
+          agent took the shortest sequence of actions or wasted resources on redundant tools or analyzing specific segments of the
+          trajectory to see if the agent excels at information retrieval but struggles with mathematical synthesis.
 
-- Human Oversight: The practice of keeping humans actively involved in continuously monitoring of AI agents. In agent trajectory management,
-                   it ensures that network management agents do not go off the rails, violate safety protocols, or waste resources. It transforms
-                   a fully autonomous "black box" into a controllable and collaborative system.
+- Human Oversight: The practice of keeping humans actively involved in continuously monitoring of AI agents. In agent trajectory
+                   management, it ensures that network management agents do not go off the rails, violate safety protocols, or waste
+                   resources. It transforms a fully autonomous "black box" into a controllable and collaborative system.
 
-- Behavior: pattern of reasoning, decisions, and actions an AI agent takes to achieve a specific goal such as reasoning sequence, the sequence
-            and logic of execution paths.
+- Behavior: pattern of reasoning, decisions, and actions an AI agent takes to achieve a specific goal such as reasoning sequence,
+            the sequence and logic of execution paths.
 
-- Trajectory Record: Keep track of Agent behaviour and produce audit log or trace information to Capture the entire "flight path" or reasoning
-                     sequence the agent followed to reach its conclusion using a structured Thought,Action,Observation loop.
+- Trajectory Record: Keep track of Agent behaviour and produce audit log or trace information to Capture the entire "flight path"
+                     or reasoning sequence the agent followed to reach its conclusion using a structured Thought,Action,Observation
+                     loop.
 
 # Problem Space
 

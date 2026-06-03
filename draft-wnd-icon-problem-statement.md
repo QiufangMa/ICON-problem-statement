@@ -218,7 +218,7 @@ of the data points involved in active agent pipelines.
  becomes highly ambiguous. This lack of clear lineage creates severe complications
  for post-incident root-cause analysis and regulatory compliance reporting.
 
-## The Invention Impasse
+## The Intervention Impasse
 
 ### Static IAM Failures
 

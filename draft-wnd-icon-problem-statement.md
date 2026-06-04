@@ -29,10 +29,6 @@ author:
     organization: Huawei
     email: bill.wu@huawei.com
  -
-    fullname: Manoj Nair
-    organization: NetCracker
-    email: manoj.k.nair@netcracker.com
- -
     fullname: Daniele Ceccarelli
     organization: Cisco
     email: daniele.ietf@gmail.com

@@ -408,36 +408,35 @@ This means running the agent in a restricted environment so it cannot cross trus
 compromised. Dynamically limiting the execution boundary can be achieved by adjusting the agent's runtime environment,
 permissions, and accessible resources in real time based on task context and trust level.
 
-## Trust I&C Approaches
+## Trust Control Approaches
 
-TR270 defines Trust as "An assessment by an agent in a trustor role that another agent in a trustee role can satisfy a
-request to perform an action or provide information with acceptable expected outcomes and risk". Trust in autonomous
-agents spans multiple dimensions, including identity (who the agent is), authorization (what it is allowed to do),
-control (how its actions are governed during execution), behavior (whether it acts in alignment with expected goals
-and produces correct outcomes), and context (under what conditions it operates). There are also different scope of
-trust under discussion across industry including
+Trust in autonomous agents spans across multiple dimensions, including identity (who the agent is), authorization (what it
+is allowed to do), control (how its actions are peformed during execution), behavior (whether it acts in alignment
+with expected goals and produces correct outcomes), and context (under what conditions it operates). There are also
+different scope of trust under discussion across industry including:
+
 - Trust at the individual agent and multi-agent execution and operational behavior, focusing on execution reliability,
   explainability, and accountability
+  
 - Trust in the wider ecosystem where the agent is procured and operated, including the LLM, vendor or infrastructure
   from where it is sourced, tools it access, agent framework used for development, runtime environment/harness sanity,
   and governance/certification mechanisms.
+
 - Across agent ecosystem where trust is established between different organizations/platforms through trust domains and
   trust federation across them.
 
-Trust I&C is considered as a set of mechanisms that enable the establishment, enforcement, and continuous adaptation of
-trust governance for autonomous agents. These mechanisms address both pre-execution controls (defining what an agent is
+Trust Control is considered as a set of mechanisms that enable the establishment, enforcement, and continuous adaptation of
+trust for autonomous agents. These mechanisms address both pre-execution controls (defining what an agent is
 allowed to do) and in-execution adaptations (adjusting trust based on context and observed behavior).
 
 Traditional IAM frameworks, designed for human users and deterministic software processes, are insufficient to model the
-dynamic trust governance aspects of  autonomous agents. The emerging Trust I&C approaches extend beyond static identity
-and permission models to incorporate context-awareness, temporal constraints, and behavior-driven trust evaluation. Since
-this is a cross cutting concern with Security, it requires broader discussion on whether Trust governance and control should
-be driven by an Agent Governance Control Plane or a separate Security governance plane.
+dynamic trust governance aspects of autonomous agents. The emerging Trust Control approaches extend beyond static identity
+and permission models to incorporate context-awareness, temporal constraints, and behavior-driven trust evaluation.
 
 Some of the approaches followed for controlling the agent trust are given below:
 
 - Agent privilege control: The most widely deployed current approach to agent trust governance is the application of static
-  least-privilege principles -  granting agents the minimum tool access, API permissions, and system scope required for their
+  least-privilege principles, granting agents the minimum tool access, API permissions, and system scope required for their
   designated tasks, expressed through standard IAM constructs (service accounts, API keys, OAuth scopes). Its limitation in
   agent-based systems is that tasks are dynamic. Permissions set for a typical task may be too limited for edge cases, pushing
   systems to grant broader access than necessary. On the other hand, permissions designed for complex tasks may be too broad for
@@ -449,7 +448,7 @@ Some of the approaches followed for controlling the agent trust are given below:
   minimum access needed for a specific task and only for a limited time.
 
 - Context aware trust assignment: Instead of static roles or scopes, access decisions are made dynamically using attributes and
-  runtime context such as task type, data sensitivity, user intent, environment state, or risk level. For e.g. agent is allowed
+  runtime context such as task type, data sensitivity, user intent, environment state, or risk level, e.g., agent is allowed
   to access certain tools/data only within/belonging to a compliant geography, where it is legally allowed to access such data.
 
 - Dynamic trust level assignment: This is one of the advanced and emerging mechanism (e.g. Microsoft Agent Governance Toolkit)
@@ -458,8 +457,8 @@ Some of the approaches followed for controlling the agent trust are given below:
   of access the agent gets, adjusting its permissions based on how trustworthy it is at that moment.
 
 The first two approaches rely on a well-defined agent identity to assign and enforce permissions. The fourth approach focus more on
-the behavior of agent, i.e. it requires not just identity, but also continuous behavior-based evaluation, where access is determined
-by how the agent performs over time - i.e based on trust score, agent is mapped to a trust zone or trust level that determines the
+the behavior of agent, i.e., it requires not just identity, but also continuous behavior-based evaluation, where access is determined
+by how the agent performs over time,i.e, based on trust score, agent is mapped to a trust zone or trust level that determines the
 authority and access assigned to agent. The definition and management of agent identity are beyond the scope of this document.
 
 ### Trust Delegation Across Agents
@@ -472,15 +471,15 @@ models assume a human delegating to another human or to a deterministic software
 the receiving party has a fixed role, and the scope of delegation is defined at design time. The delegating agent may itself be
 operating under dynamically adjusted trust constraints. The receiving agent may be a different implementation, framework, or vendor.
 The scope of work being delegated may not have been anticipated when permissions were originally configured. The techniques used
-in trust delegation follows similar patterns as in single agent scenario.
+in trust delegation follows similar patterns as in single agent scenario:
 
 - Flat delegation: One of the popular pattern today and not advisable in production environment (violated least-privilege principle).
   In this approach delegating agent's full permission scope is passed to the sub-agent without constraint. The sub-agent operates with
   the same access as the orchestrator, regardless of whether the delegated task requires it.
 
-- Scoped delegation : The orchestrating agent generates a time-limited, scope-limited delegation token that the sub-agent presents to the
- systems it needs to access. This requires the orchestrating agent to have the capability to generate delegation tokens which is a
- capability most current agent frameworks do not provide natively.
+- Scoped delegation : The orchestrating agent generates a time-limited, scope-limited delegation token that the sub-agent presents
+  to the systems it needs to access. This requires the orchestrating agent to have the capability to generate delegation tokens which
+  is a capability most current agent frameworks do not provide natively.
 
 - Trust score inheritance: In this approach (which is based on trust scoring discussed above), the trust level of a sub-agent is
   constrained to a level lower than the current trust score of the delegating agent. This pattern requires a shared trust scoring
@@ -493,9 +492,9 @@ around establishing trust verification mechanisms between agents and there are p
 Protocol which aim to address this by enabling agents to validate the identity, intent, and trustworthiness of other agents before
 accepting and executing delegated tasks. Refer to link for more details.
 
-### Intervention and Control Relevance
+### Observability, Intervention and Control Consideration
 
-From an I&C perspective, both single-agent trust models and multi-agent trust delegation scenarios require a shift from static
+From the I&C perspective, both single-agent trust models and multi-agent trust delegation scenarios require a shift from static
 access control followed in current software and human based systems to a continuous, real-time supervisory control framework.
 It is essential to establish intervention points across the entire agent lifecycle, that allows I&C systems or human supervisors
 to monitor, validate, override, or terminate actions based on contextual risk, policy compliance, and business impact. This
@@ -594,7 +593,7 @@ From the I&C perspective following are some of the key limitations in incorporat
   present, most control mechanisms are tightly coupled to specific frameworks or vendor implementations, leading to fragmented and
   non-interoperable approaches.
 
-## Limitations of Trust I&C
+## Limitations of Trust Control Approaches
 
 Current trust models are implementation-specific and lack interoperability across agent frameworks. Advanced approaches highlighted
 above, such as dynamic trust scoring, evaluate agent behavior within the context of a single framework, rather than considering

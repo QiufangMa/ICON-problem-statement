@@ -612,7 +612,7 @@ Observability,Intervention and Control in autonomous networks. The intent is to 
 network management technologies developed in IETF OPS Area and drive network automation moving toward AI Driven Network Operation.
 
 - Agent Observability,Intervention and Control Architecture: Developing or selecting a framework for enforcing boundaries,
-  detecting, evaluating,interrupting, correcting, and recovering from agent behavior within operational and compliance boundaries. 
+  detecting, evaluating,interrupting, correcting, and recovering from agent behavior within operational and compliance boundaries.
 
 - Telemetry protocol extension Enabling network behavioral assessment through analysis of observed operational network data
   (logs, metrics, traces, etc.)

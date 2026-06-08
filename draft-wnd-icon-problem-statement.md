@@ -192,6 +192,17 @@ Without an out-of-band mechanism to inspect this reasoning layer, operators
 cannot validate the safety or intent of an agent's planned mutations before
 they introduce unexpected consenquence on the infrastructure.
 
+### Ambiguity of Accountability Attribution
+
+In distributed multi-agent topologies, operational responsibility for an ultimate
+network outcome is scattered across an extended chain of coordinating agents,
+foundational models, and abstraction layers. When system failures, performance
+degradations, or unintended consequences occur, attributing accountability to
+a specific agent entity, localized model decision, or human-in-the-loop anchor
+becomes highly ambiguous. This lack of clear traceability or metrics characterizing
+agent operational health such as action execution latency, error rates, creates severe
+complications for post-incident root-cause analysis and regulatory compliance reporting.
+
 ### High-Velocity Data Ingestion
 
 Agents are explicitly designed to operate with high degrees of autonomy, speed, and
@@ -201,50 +212,6 @@ these systems at the same machine-speed pace. Consequently, effective
 real-time oversight becomes functionally impossible. Always relying on human
 escalation paradigms is usually impractical due to the sheer volume and velocity
 of the data points involved in active agent pipelines.
-
-### Ambiguity of Traceability or Accountability Attribution
-
- In distributed multi-agent topologies, operational responsibility for an ultimate
- network outcome is scattered across an extended chain of coordinating agents,
- foundational models, and abstraction layers. When system failures, performance
- degradations, or unintended consequences occur, attributing accountability to
- a specific agent entity, localized model decision, or human-in-the-loop anchor
- becomes highly ambiguous. This lack of clear traceability creates severe complications
- for post-incident root-cause analysis and regulatory compliance reporting.
-
-## The Intervention Aspect
-
-### Static IAM Failures
-
-Existing trust and authorization models have failed to evolve in step with
-dynamic agentic AI architectures. Traditional Identity and Access Management
-(IAM) frameworks were designed exclusively for human operators or static,
-deterministic software processes. These frameworks cannot securely govern
-emerging dynamic agent personas such as autonomous entity identities and behavioral
-profiles which are frequently created and modified on the fly through metadata
-information to describe functional capabilities, nor can they safely manage
-downstream sub-agent permission delegation or context-dependent privilege escalation.
-
-### Multi-Vendor Dependency Risks
-
-As CSPs begin sourcing agentic capabilities from diverse third-party
-vendors, independent software providers, and hyperscalers, operational
-accountability becomes externalized in ways that are difficult to technically
-or contractually enforce. A typical production agent implementation features
-highly fragmented dependency chains spanning completely separate vendor
-ecosystems, including LLM/AI model providers, infrastructure hosts, core
-agent frameworks, tool/API repositories, and interconnection fabrics.
-
-### Fragmentation Across Heterogeneous Integration Layers
-
-Agentic systems operating across mixed Operational Support Systems (OSS)
-and Network Management domains must interact with a highly
-heterogeneous mix of legacy systems, modern APIs, and third-party
-platforms. Establishing consistent, bounded governance across these
-disparate integration layers is exceptionally complex. Agents routinely
-invoke actions or retrieve sensitive network data through emerging pathways
-(e.g., MCP endpoints) that were originally engineered for standard software
-clients and never designed to handle AI-driven, autonomous agency.
 
 ## The Control Aspect
 
@@ -258,21 +225,50 @@ variability makes operational outcomes significantly less predictable
 during runtime execution, bypassing legacy input/output filters that
 fail to account for real-time contextual adaptation.
 
+### Static IAM Limitation
 
-### Maturity Asymmetry in Governance Enablers
+Existing trust and authorization models have failed to evolve in step with
+dynamic agentic AI architectures. Traditional Identity and Access Management
+(IAM) frameworks were designed exclusively for human operators or static,
+deterministic software processes. These frameworks cannot securely tackle
+emerging dynamic agent atrributes such as autonomous entity identities and behavioral
+profiles which are frequently created and modified at runtime rather than being
+pre-provisioned with metadata information to describe functional capabilities, nor can
+they safely manage downstream sub-agent permission delegation or context-dependent
+privilege escalation.
 
-A distinct functional asymmetry has emerged between operational
-capabilities and governance mechanisms.
+### Fragmentation Across Heterogeneous Integration Layers
+
+Agentic systems operating across mixed Operational Support Systems (OSS)
+and Network Management domains must interact with a highly
+heterogeneous mix of legacy systems, modern APIs, and third-party
+platforms. Establishing consistent, operational and compliance boundaries across these
+disparate integration layers is exceptionally complex. as agents may routinely validate intent,
+invoke actions or retrieve data through pathways (e.g. MCP/A2A etc.) that were never
+designed with AI-driven autonomy in mind.
+
+### Multi-Vendor Dependency Risks
+
+As network operators begin sourcing agentic control capabilities from diverse third-party
+vendors, independent software providers, and hyperscalers, operational
+accountability becomes externalized in ways that are difficult to technically
+or contractually enforce. A typical production agent implementation features
+highly fragmented dependency chains spanning completely separate vendor
+ecosystems, including LLM/AI model providers, infrastructure hosts, core
+agent frameworks, tool/API repositories, and interconnection fabrics.
+
+## The Intervention Aspect
+
+### Lack Human Oversight
 
 Core features such as multi-agent execution, advanced interoperability frameworks
 for agent to agent, agent to tools communication (e.g., Agent-to-Agent {{A2A}}
 and Model Context Protocol {{MCP}}), and long-running autonomous actions are
 advancing rapidly.
 
-Conversely, essential governance enablers including runtime intervention
-controls, deterministic transaction rollback, and cross-agent Collaboration
-traceability, agent behavior traceability remain highly immature and lack
-clear standardisation paths.
+However, essential human oversight capabilities including runtime intervention for execution
+interruption, deterministic transaction rollback and Recovery, and human escalation remain highly
+immature and lack clear standardisation paths.
 
 ### AI-Native Failure Emergence
 

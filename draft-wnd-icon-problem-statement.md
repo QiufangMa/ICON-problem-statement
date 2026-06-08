@@ -417,7 +417,7 @@ different scope of trust under discussion across industry including:
 
 - Trust at the individual agent and multi-agent execution and operational behavior, focusing on execution reliability,
   explainability, and accountability
-  
+
 - Trust in the wider ecosystem where the agent is procured and operated, including the LLM, vendor or infrastructure
   from where it is sourced, tools it access, agent framework used for development, runtime environment/harness sanity,
   and governance/certification mechanisms.

@@ -243,9 +243,9 @@ Agentic systems operating across mixed Operational Support Systems (OSS)
 and Network Management domains must interact with a highly
 heterogeneous mix of legacy systems, modern APIs, and third-party
 platforms. Establishing consistent, operational and compliance boundaries across these
-disparate integration layers is exceptionally complex. as agents may routinely validate intent,
+disparate integration layers is exceptionally complex as agents may routinely validate intent,
 invoke actions or retrieve data through pathways (e.g. MCP/A2A etc.) that were never
-designed with AI-driven autonomy in mind.
+designed with network management automation we used today.
 
 ### Multi-Vendor Dependency Risks
 

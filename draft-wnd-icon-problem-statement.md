@@ -180,7 +180,7 @@ architectures creates a structural mismatch between machine-speed
 execution and human-speed oversight. This gap manifests in several
 distinct problem areas:
 
-## The Observability Deficit
+## The Observability Aspect
 
 ### Limited Transparency in Planning and Decision-Making
 
@@ -215,7 +215,7 @@ of the data points involved in active agent pipelines.
  becomes highly ambiguous. This lack of clear lineage creates severe complications
  for post-incident root-cause analysis and regulatory compliance reporting.
 
-## The Intervention Impasse
+## The Intervention Aspect
 
 ### Static IAM Failures
 
@@ -249,7 +249,7 @@ invoke actions or retrieve sensitive network data through emerging pathways
 (e.g., MCP endpoints) that were originally engineered for standard software
 clients and never designed to handle AI-driven, autonomous agency.
 
-## The Control Fallback Gap
+## The Control Aspect
 
 ### Inadequacy of Deterministic Constraints
 

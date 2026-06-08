@@ -431,7 +431,7 @@ allowed to do) and in-execution adaptations (adjusting trust based on context an
 Traditional IAM frameworks, designed for human users and deterministic software processes, are insufficient to model the
 dynamic trust governance aspects of  autonomous agents. The emerging Trust I&C approaches extend beyond static identity
 and permission models to incorporate context-awareness, temporal constraints, and behavior-driven trust evaluation. Since
-this is a cross cutting concen with Security, it requires broader discussion on whether Trust governance and control should
+this is a cross cutting concern with Security, it requires broader discussion on whether Trust governance and control should
 be driven by an Agent Governance Control Plane or a separate Security governance plane.
 
 Some of the approaches followed for controlling the agent trust are given below:
@@ -578,7 +578,7 @@ As highlighted above intervention mechanisms exist in primitive and framework-sp
   that continuously monitors agent behaviour against governance policies and automatically triggers a proportionate intervention
   response when a deviation is detected
 
-## Limitations of Security I&C
+## Limitations of Security Control Approaches
 
 From the I&C perspective following are some of the key limitations in incorporating Security controls in agent.
 

@@ -361,14 +361,14 @@ function or if-else statements. Similarly, Google ADK (Agent Development Kit) pr
 before or after tool use and implement quality gate logic. So most of the techniques that exist today are agent
 framework specific.
 
-## Intervention Approaches
+## Existing Intervention Approaches
 
 The intervention mechanisms that exist today in agentic systems are mostly implementation-specific, tied to individual
 frameworks, and not mature enough to form a consistent or deployable operational practice. Currently, the mechanisms
 involve the following:
 
 - Primitive and manually controlled repurposed from the infrastructure: Reuse approaches from the infrastructure
-  control such as process termination, API key revocation, service account suspension, and network-level blocking -
+  control such as process termination, API key revocation, service account suspension, and network-level blocking
   which are not primarily designed for agentic systems. While they can be effective, operations like terminating an
   agent process preserves no state, enables no graceful recovery, produces no trace, and cannot be applied selectively
   to a specific action class or task scope.
@@ -382,7 +382,7 @@ involve the following:
   restrict an agent's execution when predefined risk, policy, or trust conditions are violated) is supported in the
   Microsoft Agent Governance Toolkit, but its interoperability across different agent frameworks is not proven.
 
-## Security I&C Approaches
+## Security Control Approaches
 
 Whether security control (specifically control mechanisms, not broader security governance) should fall within the
 scope of I&C (Intervention and Control) requires further discussion.
@@ -392,22 +392,21 @@ ensure that the inputs it receives and processes are not tampered with and manip
 what the agent does, i.e. its actions within the operational environment. This includes ensuring that actions remain
 within authorized boundaries, are observable, and can be corrected or reversed when necessary.
 
-It is believed that the security and I&C should be treated as distinct disciplines, with separate tooling and
-governance responsibilities, but closely coordinated. Security acts as the first line of defense, preserving the
-integrity of the agent's inputs and reasoning. I&C serves as the operational control layer, governing agent behaviour
-regardless of whether decisions are valid or compromised. Another way to view this is: when an agent's security is
-compromised, it is the responsibility of the security layer to prevent or detect this. However, if the security layer
-is bypassed (when adversarial techniques evolve) and if agent still proceeds to action execution, I&C functions as the
-governance backstop, that intervenes to constrain or correct the agent's actions. I&C ensures that there is a minimum
-level of control is in place to control agent behavior when such security issues emerge and bypassed.
+It is believed that the security Control should be treated as distinct disciplines, with separate tooling and
+governance responsibilities, but closely coordinated. Security acts as the first line of the defense, preserving the
+integrity of the agent's inputs and reasoning. Security Control serves as the operational control layer, governing agent behaviour
+regardless of whether decisions are valid or compromised.
 
-From an I&C perspective, a prominent way to manage agent security risk is to sandbox the agent's execution environment.
+Another way to view this is: when an agent's security is compromised, it is the responsibility of the security layer
+to prevent or detect this. However, if the security layer is bypassed (when adversarial techniques evolve) and if agent
+still proceeds to action execution, security control functions as the governance backstop, that intervenes to constrain
+or correct the agent's actions. Security Control ensures that there is a minimum level of control is in place to control
+agent behavior when such security issues emerge and bypassed.
+
+From the I&C perspective, a prominent way to manage agent security risk is to sandbox the agent's execution environment.
 This means running the agent in a restricted environment so it cannot cross trust boundaries, even if it is
 compromised. Dynamically limiting the execution boundary can be achieved by adjusting the agent's runtime environment,
-permissions, and accessible resources in real time based on task context and trust level. In addition, several
-guardrail-based techniques are applied, such as sanitizing inputs before they enter the agent's context, verifying the
-source of retrieved data, using intent classifiers to detect hidden or malicious instructions in non-instructional
-inputs.
+permissions, and accessible resources in real time based on task context and trust level.
 
 ## Trust I&C Approaches
 
@@ -505,7 +504,6 @@ adjust based on the agent's trust score, task criticality, and operational conte
 constraint injection, that allows permissions, and execution boundaries (e.g., budget, scope, data access) to be modified during
 runtime for both individual agents and chains of delegated agents. This also highlights the need for observability into the agent
 actions so that I&C system can intervene to control based on trust score and associated risks.
-
 
 # Gaps in the Current Approaches
 

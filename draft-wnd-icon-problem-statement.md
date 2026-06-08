@@ -453,7 +453,7 @@ Some of the approaches followed for controlling the agent trust are given below:
   to access certain tools/data only within/belonging to a compliant geography, where it is legally allowed to access such data.
 
 - Dynamic trust level assignment: This is one of the advanced and emerging mechanism (e.g. Microsoft Agent Governance Toolkit)
-  where instead of labeling agents as just trusted or untrusted, this model gives each agent a trust score that changes over time.
+  where instead of labelling agents as just trusted or untrusted, this model gives each agent a trust score that changes over time.
   The score increases when the agent follows policies and drops quickly when it violates them. This score then decides what level
   of access the agent gets, adjusting its permissions based on how trustworthy it is at that moment.
 

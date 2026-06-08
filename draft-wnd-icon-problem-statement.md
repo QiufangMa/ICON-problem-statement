@@ -171,14 +171,11 @@ identify gaps that need to be filled.
 
 # Problem Space
 
-The deployment of autonomous agentic systems within Communications
-Service Provider (CSP) networks introduces fundamental operational,
-architectural, and governance challenges. Current network management
-paradigms are built on deterministic models that assume predictable,
-rule-based behaviors. The shift toward non-deterministic (probabilistic), AI-native
-architectures creates a structural mismatch between machine-speed
-execution and human-speed oversight. This gap manifests in several
-distinct problem areas:
+The deployment of autonomous agentic systems within operators' networks introduces fundamental operational,
+architectural challenges. Current network management paradigms are built on deterministic models that assume
+predictable, rule-based behaviors. The shift toward non-deterministic (probabilistic), AI-driven network
+operation architectures creates a structural mismatch between machine-speed execution and human-speed oversight.
+This gap manifests in several distinct problem areas:
 
 ## The Observability Aspect
 
@@ -193,26 +190,26 @@ action sequences are generated.
 
 Without an out-of-band mechanism to inspect this reasoning layer, operators
 cannot validate the safety or intent of an agent's planned mutations before
-they hit the infrastructure.
+they introduce unexpected consenquence on the infrastructure.
 
 ### High-Velocity Data Ingestion
 
-Agents are explicitly designed to operate with high degrees of autonomy,
-speed, and scale. However, CSPs currently lack the corresponding telemetry
-and control infrastructure required to observe, evaluate, and intercept
+Agents are explicitly designed to operate with high degrees of autonomy, speed, and
+scale. However, network operators currently lack the corresponding telemetry
+mechanism and control infrastructure required to observe, evaluate, and intercept
 these systems at the same machine-speed pace. Consequently, effective
 real-time oversight becomes functionally impossible. Always relying on human
 escalation paradigms is usually impractical due to the sheer volume and velocity
 of the data points involved in active agent pipelines.
 
-### Ambiguity of Lineage and Accountability Attribution
+### Ambiguity of Traceability or Accountability Attribution
 
  In distributed multi-agent topologies, operational responsibility for an ultimate
  network outcome is scattered across an extended chain of coordinating agents,
  foundational models, and abstraction layers. When system failures, performance
  degradations, or unintended consequences occur, attributing accountability to
  a specific agent entity, localized model decision, or human-in-the-loop anchor
- becomes highly ambiguous. This lack of clear lineage creates severe complications
+ becomes highly ambiguous. This lack of clear traceability creates severe complications
  for post-incident root-cause analysis and regulatory compliance reporting.
 
 ## The Intervention Aspect
@@ -273,7 +270,7 @@ and Model Context Protocol {{MCP}}), and long-running autonomous actions are
 advancing rapidly.
 
 Conversely, essential governance enablers including runtime intervention
-controls, deterministic transaction rollback, and cross-agent lineage
+controls, deterministic transaction rollback, and cross-agent Collaboration
 traceability, agent behavior traceability remain highly immature and lack
 clear standardisation paths.
 

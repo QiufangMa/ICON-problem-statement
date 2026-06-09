@@ -604,7 +604,7 @@ network management technologies developed in IETF OPS Area and drive network aut
 - Agent Observability,Intervention and Control Architecture: Developing or selecting a framework for enforcing boundaries,
   detecting, evaluating,interrupting, correcting, and recovering from agent behavior within operational and compliance boundaries.
 
-- Telemetry protocol extension Enabling network behavioral assessment through analysis of observed operational network data
+- OpenTelemetry protocol extension Enabling network behavioral assessment through analysis of observed operational network data
   (logs, metrics, traces, etc.)
 
 - Human and Agent Interaction protocol for Human Escalation/Intervention, Agent Intervention and Control

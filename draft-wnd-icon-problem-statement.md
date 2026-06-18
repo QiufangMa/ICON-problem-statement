@@ -472,6 +472,13 @@ Three limitations characterize current implementation of quality gate.
   framework, but that pause is not expressed as a standardised intervention signal that a central governance authority can monitor,
   escalate, or resolve. The gate operates in isolation from the broader governance stack.
 
+## Limitation of OpenTelemetry for Agent Observability
+
+While OpenTelemetry (OTel) is the industry standard for collecting traces, metrics, and logs, it has critical limitations when
+applied to AI agent observability.The fundamental limitation is that OpenTelemetry functions as a passive data plane for system
+performance, not an evaluation or guardrail engine for AI behavior. It can track how an application runs, but it struggles to
+evaluate what an agent decides.
+
 ## Limitations of Intervention Approaches
 
 As highlighted above intervention mechanisms exist in primitive and framework-specific forms. They have the following limitations.
